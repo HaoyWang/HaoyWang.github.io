@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>2017NOIP复赛训练日志 | 王小宇的博客</title>
+  <title>P3371单元最短路径 | 王小宇的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天你熬得起多少苦，明天你才担得起多少幸福。2017-10-18今天下午去找班主任，商量竞赛的事。因为之前打算的是复赛前三个周开始训练，现在就差不多了。 下了第一节课，班主任听我说要训练之后，只是说了句“我再和你们教练商量商量”，就让我回去上课了。下了第二节课，他把我叫去，说他们俩同意我去训练。但是班主任还提了一点要求，他要我两三天就去找他说一下这几天做了些什么。我告诉他我准备每天照常跑操，他说“">
+  <meta name="description" content="今天才学的用邻接表来存图，又顺便看了看SPFA，就做了一个模板题试一下。">
 <meta name="keywords" content="编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017NOIP复赛训练日志">
-<meta property="og:url" content="http://yoursite.com/oitrain2017/index.html">
+<meta property="og:title" content="P3371单元最短路径">
+<meta property="og:url" content="http://yoursite.com/p3371/index.html">
 <meta property="og:site_name" content="王小宇的博客">
-<meta property="og:description" content="今天你熬得起多少苦，明天你才担得起多少幸福。2017-10-18今天下午去找班主任，商量竞赛的事。因为之前打算的是复赛前三个周开始训练，现在就差不多了。 下了第一节课，班主任听我说要训练之后，只是说了句“我再和你们教练商量商量”，就让我回去上课了。下了第二节课，他把我叫去，说他们俩同意我去训练。但是班主任还提了一点要求，他要我两三天就去找他说一下这几天做了些什么。我告诉他我准备每天照常跑操，他说“">
+<meta property="og:description" content="今天才学的用邻接表来存图，又顺便看了看SPFA，就做了一个模板题试一下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-18T11:07:24.039Z">
+<meta property="og:updated_time" content="2017-10-19T03:02:57.186Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017NOIP复赛训练日志">
-<meta name="twitter:description" content="今天你熬得起多少苦，明天你才担得起多少幸福。2017-10-18今天下午去找班主任，商量竞赛的事。因为之前打算的是复赛前三个周开始训练，现在就差不多了。 下了第一节课，班主任听我说要训练之后，只是说了句“我再和你们教练商量商量”，就让我回去上课了。下了第二节课，他把我叫去，说他们俩同意我去训练。但是班主任还提了一点要求，他要我两三天就去找他说一下这几天做了些什么。我告诉他我准备每天照常跑操，他说“">
+<meta name="twitter:title" content="P3371单元最短路径">
+<meta name="twitter:description" content="今天才学的用邻接表来存图，又顺便看了看SPFA，就做了一个模板题试一下。">
   
     <link rel="alternative" href="/atom.xml" title="王小宇的博客" type="application/atom+xml">
   
@@ -165,29 +165,29 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-oitrain2017" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-p3371" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      2017NOIP复赛训练日志
+      P3371单元最短路径
     </h1>
   
 
         
-        <a href="/oitrain2017/" class="archive-article-date">
-  	<time datetime="2017-10-18T10:59:02.023Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-18</time>
+        <a href="/p3371/" class="archive-article-date">
+  	<time datetime="2017-10-19T02:41:47.985Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="今天你熬得起多少苦，明天你才担得起多少幸福。"><a href="#今天你熬得起多少苦，明天你才担得起多少幸福。" class="headerlink" title="今天你熬得起多少苦，明天你才担得起多少幸福。"></a>今天你熬得起多少苦，明天你才担得起多少幸福。</h4><h5 id="2017-10-18"><a href="#2017-10-18" class="headerlink" title="2017-10-18"></a>2017-10-18</h5><p>今天下午去找班主任，商量竞赛的事。因为之前打算的是复赛前三个周开始训练，现在就差不多了。</p>
-<p>下了第一节课，班主任听我说要训练之后，只是说了句“我再和你们教练商量商量”，就让我回去上课了。下了第二节课，他把我叫去，说他们俩同意我去训练。但是班主任还提了一点要求，他要我两三天就去找他说一下这几天做了些什么。我告诉他我准备每天照常跑操，他说“那样更好，你就每天跑操的时候和我说吧。”</p>
-<p>我也很同意他的做法，至少这样还能督促着我不要浪费时间，要不然都没法跟老师交代。我发现自己有很多东西并没有掌握，希望在这三个周的时间里，我能多学点东西，有些进步吧。尽力在复赛里争取到一个好的成绩，也算是无愧于这些努力了。</p>
+        <p>今天才学的用邻接表来存图，又顺便看了看SPFA，就做了一个模板题试一下。<a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;string.h&gt;</div><div class="line">#include&lt;algorithm&gt;</div><div class="line">#include&lt;math.h&gt;</div><div class="line">using namespace std;</div><div class="line">struct kkk&#123;</div><div class="line">    int next,to,length;</div><div class="line">&#125;edge[500010];//用邻接表来存图</div><div class="line">int head[10010],ans[10010],team[500010];</div><div class="line">bool visited[10010];</div><div class="line">int now,n,m,s;</div><div class="line">void spfa()</div><div class="line">&#123;</div><div class="line">    int i,j,h,t,u,v;</div><div class="line">    for (i=1;i&lt;=10010;i++) ans[i]=9999999;//把ans数组初始化</div><div class="line">    ans[s]=0;//把起点到起点的距离设置为0</div><div class="line">    memset(visited,0,sizeof(visited));//把全部点都设置为未入队</div><div class="line">    team[1]=s;//起点入队</div><div class="line">    h=0;</div><div class="line">    t=1;//初始化头、尾指针</div><div class="line">    visited[s]=true;//起点为入队状态</div><div class="line">    while (h&lt;t)</div><div class="line">    &#123;</div><div class="line">        h++;</div><div class="line">        u=team[h];//取出首指针指向的点</div><div class="line">        visited[u]=false;//这个点出队</div><div class="line">        for (i=head[u];i;i=edge[i].next)//枚举这个点的每一条出边</div><div class="line">        &#123;</div><div class="line">            v=edge[i].to;//取出这一条边指向的点</div><div class="line">            if (ans[v]&gt;ans[u]+edge[i].length)//松弛操作</div><div class="line">            &#123;</div><div class="line">                ans[v]=ans[u]+edge[i].length;</div><div class="line">                if (visited[v]==false)//如果当前点还未入队，则将其入队</div><div class="line">                &#123;</div><div class="line">                    t++;</div><div class="line">                    team[t]=v;</div><div class="line">                    visited[v]=true;//把这个新入队的点设为入队状态</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">void add(int x,int y,int l)</div><div class="line">&#123;</div><div class="line">    now++;</div><div class="line">    edge[now].to=y;</div><div class="line">    edge[now].length=l;</div><div class="line">    edge[now].next=head[x];//把当前点的原来的第一条边设置为新添加的边的下一条边</div><div class="line">    head[x]=now;//把新添加的这条边设置为当前点的第一条边</div><div class="line">&#125;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int i,j,f,g,w;</div><div class="line">    scanf(&quot;%d%d%d&quot;,&amp;n,&amp;m,&amp;s);</div><div class="line">    for (i=1;i&lt;=m;i++)</div><div class="line">    &#123;</div><div class="line">        scanf(&quot;%d%d%d&quot;,&amp;f,&amp;g,&amp;w);</div><div class="line">        add(f,g,w);//添加边</div><div class="line">    &#125;</div><div class="line">    spfa();</div><div class="line">    for (i=1;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        if (ans[i]==9999999) printf(&quot;2147483647 &quot;);</div><div class="line">        else printf(&quot;%d &quot;,ans[i]);</div><div class="line">    &#125;//输出</div><div class="line">    printf(&quot;\n&quot;);</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>邻接表是今天学长才给我讲的。毕竟代码实现上没有多少难度，所以只要理解了，还行比较容易的。</p>
 
       
 
@@ -278,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/oitrain2017/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/p3371/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,18 +292,9 @@
   
 <nav id="article-nav">
   
-    <a href="/p3371/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          P3371单元最短路径
-        
-      </div>
-    </a>
   
-  
-    <a href="/oi/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">选择了这条路，就不要放弃</div>
+    <a href="/oitrain2017/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">2017NOIP复赛训练日志</div>
       <i class="icon-circle-right"></i>
     </a>
   
