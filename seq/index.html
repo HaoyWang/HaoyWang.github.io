@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>排列 | 王小宇的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题意给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。 思路这是我当时做的一个60分的办法，用的是二维DP。 这道题和导弹拦截有点相似，所以我就先写了一个递增子序列和一个递减子序列。又把DP数组开到二维，用第二维来代表两个数之间的差。复">
+  <meta name="description" content="题意给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。">
 <meta name="keywords" content="编程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="排列">
 <meta property="og:url" content="http://yoursite.com/seq/index.html">
 <meta property="og:site_name" content="王小宇的博客">
-<meta property="og:description" content="题意给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。 思路这是我当时做的一个60分的办法，用的是二维DP。 这道题和导弹拦截有点相似，所以我就先写了一个递增子序列和一个递减子序列。又把DP数组开到二维，用第二维来代表两个数之间的差。复">
+<meta property="og:description" content="题意给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-23T10:55:26.546Z">
+<meta property="og:updated_time" content="2017-10-23T11:25:08.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排列">
-<meta name="twitter:description" content="题意给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。 思路这是我当时做的一个60分的办法，用的是二维DP。 这道题和导弹拦截有点相似，所以我就先写了一个递增子序列和一个递减子序列。又把DP数组开到二维，用第二维来代表两个数之间的差。复">
+<meta name="twitter:description" content="题意给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。">
   
     <link rel="alternative" href="/atom.xml" title="王小宇的博客" type="application/atom+xml">
   
@@ -179,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h5><p>给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。</p>
+        <h5 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h5><p>给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。<a id="more"></a></p>
 <h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>这是我当时做的一个60分的办法，用的是二维DP。</p>
 <p>这道题和导弹拦截有点相似，所以我就先写了一个递增子序列和一个递减子序列。又把DP数组开到二维，用第二维来代表两个数之间的差。复杂度很高，但是数据比较简单，能过60%。</p>
 <p>再就是我加了一个小小的优化，只要判断到有长度到达3的子序列，就直接返回true，不用继续判断了。</p>
@@ -427,6 +427,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">编程</a>
               </li>
              
@@ -436,10 +440,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">文章</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
