@@ -159,6 +159,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-seq" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/seq/">排列</a>
+    </h1>
+  
+
+        
+        <a href="/seq/" class="archive-article-date">
+  	<time datetime="2017-10-23T10:43:58.041Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h5><p>给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。</p>
+<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>这是我当时做的一个60分的办法，用的是二维DP。</p>
+<p>这道题和导弹拦截有点相似，所以我就先写了一个递增子序列和一个递减子序列。又把DP数组开到二维，用第二维来代表两个数之间的差。复杂度很高，但是数据比较简单，能过60%。</p>
+<p>再就是我加了一个小小的优化，只要判断到有长度到达3的子序列，就直接返回true，不用继续判断了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;math.h&gt;</div><div class="line">#include&lt;string.h&gt;</div><div class="line">#include&lt;algorithm&gt;</div><div class="line">using namespace std;</div><div class="line">int a[10010],f1[10010][1010],f2[10010][1010],l[1010];</div><div class="line">int n;</div><div class="line">bool search()</div><div class="line">&#123;</div><div class="line">	int i,j,k,kkk;</div><div class="line">	for (i=1;i&lt;=n;i++)</div><div class="line">	for (j=1;j&lt;=1010;j++)</div><div class="line">	&#123;</div><div class="line">		f1[i][j]=1;</div><div class="line">		f2[i][j]=1;</div><div class="line">	&#125;</div><div class="line">	for (i=n-1;i&gt;=1;i--)</div><div class="line">	&#123;</div><div class="line">		memset(l,0,sizeof(l));</div><div class="line">		kkk=0;</div><div class="line">		for (j=i+1;j&lt;=n;j++) if ((a[j]&gt;a[i])&amp;&amp;(f1[j][a[j]-a[i]]&gt;l[a[j]-a[i]]))</div><div class="line">		&#123;</div><div class="line">			l[a[j]-a[i]]=f1[j][a[j]-a[i]];</div><div class="line">			kkk=max(kkk,a[j]-a[i]);</div><div class="line">		&#125;</div><div class="line">		for (j=1;j&lt;=kkk;j++)</div><div class="line">		&#123;</div><div class="line">			if (l[j]&gt;0) f1[i][j]=l[j]+1;</div><div class="line">			if (f1[i][j]&gt;=3) return true;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	for (i=2;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		memset(l,0,sizeof(l));</div><div class="line">		kkk=0;</div><div class="line">		for (j=1;j&lt;=i-1;j++) if ((a[j]&gt;a[i])&amp;&amp;(f2[j][a[j]-a[i]]&gt;l[a[j]-a[i]]))</div><div class="line">		&#123;</div><div class="line">			l[a[j]-a[i]]=f2[j][a[j]-a[i]];</div><div class="line">			kkk=max(kkk,a[j]-a[i]);</div><div class="line">		&#125;</div><div class="line">		for (j=1;j&lt;=kkk;j++)</div><div class="line">		&#123;</div><div class="line">			if (l[j]&gt;0) f2[i][j]=l[j]+1;</div><div class="line">			if (f2[i][j]&gt;=3) return true;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return false; </div><div class="line">&#125;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	freopen(&quot;seq.in&quot;,&quot;r&quot;,stdin);</div><div class="line">	freopen(&quot;seq.out&quot;,&quot;w&quot;,stdout);</div><div class="line">	int t,i,j;</div><div class="line">	scanf(&quot;%d&quot;,&amp;t);</div><div class="line">	for (i=1;i&lt;=t;i++)</div><div class="line">	&#123;</div><div class="line">		scanf(&quot;%d&quot;,&amp;n);</div><div class="line">		for (j=1;j&lt;=n;j++) scanf(&quot;%d&quot;,&amp;a[j]);</div><div class="line">		if (search()) printf(&quot;Y\n&quot;);</div><div class="line">		else printf(&quot;N\n&quot;); </div><div class="line">	&#125;</div><div class="line">	fclose(stdin);</div><div class="line">	fclose(stdout);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>下面的是正解：</p>
+<p>考虑若p,q,r（数字，不是下标）可以构成等差数列，那么p,r在数轴上的位置一定关于q是对称的。</p>
+<p>比如，对于一个n=8的排列，若q=5，则只有几种情况：p=4,r=6;p=3,r=7;p=2,r=8。且必须满足p在q之前出现，r在q之后出现。</p>
+<p>那么我们不妨维护一个数组exist[]，来记录当前数字的出现情况，出现为1，没出现为0。</p>
+<p>我们按A[]的顺序枚举每个数字作为q，并不断更新exist数组，判断exist数组中，exist[q]左右是否对称，若不对称，则说明存在一对p,r，一个已经出现，一个尚未出现，而目前尚未出现一定会在之后出现，这样的p,q,r一定会构成等差数列。</p>
+<p>快速判断是否对称，可以求01串的哈希值，然后用线段树来维护区间哈希值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line">#include&lt;algorithm&gt;</div><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstdlib&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;vector&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">#include&lt;cmath&gt;</div><div class="line">#include&lt;set&gt;</div><div class="line">#include&lt;map&gt;</div><div class="line">#define N 50550</div><div class="line">#define ll unsigned long long</div><div class="line">using namespace std;</div><div class="line">int sc()</div><div class="line">&#123;</div><div class="line">    int i=0,f=1;char c=getchar();</div><div class="line">    while(c&gt;&apos;9&apos;||c&lt;&apos;0&apos;)&#123;if(c==&apos;-&apos;)f=-1;c=getchar();&#125;</div><div class="line">    while(c&gt;=&apos;0&apos;&amp;&amp;c&lt;=&apos;9&apos;)i=i*10+c-&apos;0&apos;,c=getchar();</div><div class="line">    return i*f;</div><div class="line">&#125;</div><div class="line">ll t[N][2],bin[N];</div><div class="line">int n,a[N],flag;</div><div class="line">void change(int x,int l,int r,int p)</div><div class="line">&#123;</div><div class="line">    if(l==r)</div><div class="line">    &#123;</div><div class="line">        t[x][0]=t[x][1]=233;</div><div class="line">        return;</div><div class="line">    &#125;</div><div class="line">    int mid=l+r&gt;&gt;1;</div><div class="line">    if(p&lt;=mid)change(x&lt;&lt;1,l,mid,p);</div><div class="line">    else change(x&lt;&lt;1|1,mid+1,r,p);</div><div class="line">    t[x][0]=t[x&lt;&lt;1][0]*bin[r-mid]+t[x&lt;&lt;1|1][0];</div><div class="line">    t[x][1]=t[x&lt;&lt;1|1][1]*bin[mid-l+1]+t[x&lt;&lt;1][1];</div><div class="line">&#125;</div><div class="line">ll ask(int x,int L,int R,int l,int r,int d)</div><div class="line">&#123;</div><div class="line">    if(L==l&amp;&amp;R==r)return t[x][d];</div><div class="line">    int mid=L+R&gt;&gt;1;</div><div class="line">    if(r&lt;=mid)return ask(x&lt;&lt;1,L,mid,l,r,d);</div><div class="line">    else if(l&gt;mid)return ask(x&lt;&lt;1|1,mid+1,R,l,r,d);</div><div class="line">    else if(d==0) return ask(x&lt;&lt;1,L,mid,l,mid,d)*bin[r-mid]+ask(x&lt;&lt;1|1,mid+1,R,mid+1,r,d);</div><div class="line">    else if(d==1) return ask(x&lt;&lt;1|1,mid+1,R,mid+1,r,d)*bin[mid-l+1]+ask(x&lt;&lt;1,L,mid,l,mid,d);</div><div class="line">&#125;</div><div class="line">void solve(int x)</div><div class="line">&#123;</div><div class="line">    int L=min(x-1,n-x);</div><div class="line">    change(1,1,n,x);</div><div class="line">    if(x==1||x==n)return;</div><div class="line">    ll ls=ask(1,1,n,x-L,x-1,0);</div><div class="line">    ll rs=ask(1,1,n,x+1,x+L,1);</div><div class="line">    if(ls!=rs)flag=1;</div><div class="line">&#125;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    freopen(&quot;seq.in&quot;,&quot;r&quot;,stdin);</div><div class="line">    freopen(&quot;seq.out&quot;,&quot;w&quot;,stdout);</div><div class="line"></div><div class="line">    bin[0]=1;for(int i=1;i&lt;=10000;i++)bin[i]=bin[i-1]*233;</div><div class="line">    int T=sc();</div><div class="line">    while(T--)</div><div class="line">    &#123;</div><div class="line">        memset(t,0,sizeof(t));</div><div class="line">        flag=0;n=sc();</div><div class="line">        for(int i=1;i&lt;=n;i++)</div><div class="line">        &#123;</div><div class="line">            int x=sc();</div><div class="line">            if(!flag)solve(x);</div><div class="line">        &#125;</div><div class="line">        if(flag)puts(&quot;Y&quot;);else puts(&quot;N&quot;);</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我觉得这道题的正解思路还是挺难想的，代码实现起来也有一定的难度吧。期待着什么时候，我也能独立地做出这种题的正解来。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/seq/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-p1220" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -927,15 +1013,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">爱好</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">编程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">

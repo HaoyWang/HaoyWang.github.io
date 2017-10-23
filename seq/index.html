@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>选择了这条路，就不要放弃 | 王小宇的博客</title>
+  <title>排列 | 王小宇的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有比较迷茫的时候，不知道怎么去做，都是一个人在做，高一高二都没什么人说话。应该说是高二的时候，我停课之后就一个人在那儿，在一个很大的机房。这是引自黄学长的一段话。 说起我的OI历程，是从初中一年级下学期开始的。 当时我只隐约知道实验中学有学习信息竞赛的同学，但从来没想过我也会去。只是一个周四的下午，在上最后一节课前，老师告诉我和我们班里的另一个同学去一个从没去过的机房。等去了之后，我才发现来的同学">
+  <meta name="description" content="题意给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。 思路这是我当时做的一个60分的办法，用的是二维DP。 这道题和导弹拦截有点相似，所以我就先写了一个递增子序列和一个递减子序列。又把DP数组开到二维，用第二维来代表两个数之间的差。复">
 <meta name="keywords" content="编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="选择了这条路，就不要放弃">
-<meta property="og:url" content="http://yoursite.com/oi/index.html">
+<meta property="og:title" content="排列">
+<meta property="og:url" content="http://yoursite.com/seq/index.html">
 <meta property="og:site_name" content="王小宇的博客">
-<meta property="og:description" content="有比较迷茫的时候，不知道怎么去做，都是一个人在做，高一高二都没什么人说话。应该说是高二的时候，我停课之后就一个人在那儿，在一个很大的机房。这是引自黄学长的一段话。 说起我的OI历程，是从初中一年级下学期开始的。 当时我只隐约知道实验中学有学习信息竞赛的同学，但从来没想过我也会去。只是一个周四的下午，在上最后一节课前，老师告诉我和我们班里的另一个同学去一个从没去过的机房。等去了之后，我才发现来的同学">
+<meta property="og:description" content="题意给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。 思路这是我当时做的一个60分的办法，用的是二维DP。 这道题和导弹拦截有点相似，所以我就先写了一个递增子序列和一个递减子序列。又把DP数组开到二维，用第二维来代表两个数之间的差。复">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-17T13:26:51.859Z">
+<meta property="og:updated_time" content="2017-10-23T10:55:26.546Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="选择了这条路，就不要放弃">
-<meta name="twitter:description" content="有比较迷茫的时候，不知道怎么去做，都是一个人在做，高一高二都没什么人说话。应该说是高二的时候，我停课之后就一个人在那儿，在一个很大的机房。这是引自黄学长的一段话。 说起我的OI历程，是从初中一年级下学期开始的。 当时我只隐约知道实验中学有学习信息竞赛的同学，但从来没想过我也会去。只是一个周四的下午，在上最后一节课前，老师告诉我和我们班里的另一个同学去一个从没去过的机房。等去了之后，我才发现来的同学">
+<meta name="twitter:title" content="排列">
+<meta name="twitter:description" content="题意给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。 思路这是我当时做的一个60分的办法，用的是二维DP。 这道题和导弹拦截有点相似，所以我就先写了一个递增子序列和一个递减子序列。又把DP数组开到二维，用第二维来代表两个数之间的差。复">
   
     <link rel="alternative" href="/atom.xml" title="王小宇的博客" type="application/atom+xml">
   
@@ -159,44 +159,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-oi" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-seq" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      选择了这条路，就不要放弃
+      排列
     </h1>
   
 
         
-        <a href="/oi/" class="archive-article-date">
-  	<time datetime="2017-10-13T12:48:47.160Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-13</time>
+        <a href="/seq/" class="archive-article-date">
+  	<time datetime="2017-10-23T10:43:58.041Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="有比较迷茫的时候，不知道怎么去做，都是一个人在做，高一高二都没什么人说话。应该说是高二的时候，我停课之后就一个人在那儿，在一个很大的机房。"><a href="#有比较迷茫的时候，不知道怎么去做，都是一个人在做，高一高二都没什么人说话。应该说是高二的时候，我停课之后就一个人在那儿，在一个很大的机房。" class="headerlink" title="有比较迷茫的时候，不知道怎么去做，都是一个人在做，高一高二都没什么人说话。应该说是高二的时候，我停课之后就一个人在那儿，在一个很大的机房。"></a>有比较迷茫的时候，不知道怎么去做，都是一个人在做，高一高二都没什么人说话。应该说是高二的时候，我停课之后就一个人在那儿，在一个很大的机房。</h4><p>这是引自黄学长的一段话。</p>
-<p>说起我的OI历程，是从初中一年级下学期开始的。</p>
-<p>当时我只隐约知道实验中学有学习信息竞赛的同学，但从来没想过我也会去。只是一个周四的下午，在上最后一节课前，老师告诉我和我们班里的另一个同学去一个从没去过的机房。等去了之后，我才发现来的同学都是每个班里的前两名，而一个面生的老师介绍之后，我们才知道：原来我们是要来参加新一届的信竞。没错，这就是实验中学选拔信竞选手的方式。<a id="more"></a></p>
-<p>那时候我们学的语言是Pascal，其实开始我并不想学OI，只是因为班主任的要求，我只好近似于在那里耗时间——每周二和周四的下午最后一节，是我们的训练时间。</p>
-<p>后来，大概是初二上学期一开学，第一节信竞课的时候，老师告诉我们有一个比赛叫做NOIP——那是我第一次听说这个比赛。当然后来也渐渐了解了。当时老师让我们都报名了初赛，而我也完全没报希望，只觉得自己一定不会过初赛。可是等到成绩下发之后，我却知道，我们学校一共过了五个人——包括我。</p>
-<p>从这之后，我们这几个人便开始把更多的时间耗在机房里，我也开始对此有了积极性。那时候，我们对面总是坐着一个比我们高一级的学长，他总是自己默默地做题，我们之间也很少会有交流。</p>
-<p>每次上课，老师都会讲一些新的知识。我还记得当时学习递归，我们都是稀里糊涂，经常是一道递归题花很久的时间都想不过来。复赛前的最后一节课，我们学了高精度计算的模板——高精度加法和高精度减法。</p>
-<p>在此插一句——那时候我们的水平大概就是一道数字反转都要做好几天。</p>
-<p>NOIP2015是在诸城一中举行的。前一天晚上试机，我还背了一个快速排序的模板。第二天考试的时候，因为那时候也不太抱希望，所以并没有非常紧张，但是大脑中仍然是一片空白。</p>
-<p>晚上九点多，出了考场，外面下着零星小雨。我知道，这次一定考砸了，不会有什么好的成绩。</p>
-<p>果然，一个多月左右，NOIP2015普及组二等奖。</p>
-<p>之后将近半年，因为我们的竞赛教练在NOIP2015之前一个周被调走了，我们的竞赛已经完全停掉了。这一个学期里，我完全没有再去想OI。</p>
-<p>九年级上学期，学校里分了新的竞赛老师，她先找到了我们几个，于是信息竞赛又开始了。我们又开始为NOIP2016做准备。</p>
-<p>可是这次，我们学校初赛一共过了3个人。我们开始花很多的时间学习OI，刷题量也比以前多了很多。</p>
-<p>NOIP2016的时候，我自认为自己的水平已经比去年高了很多了。但是因为懂了更多，压力也更大，尤其是想到这是自己初中最后一次参见NOIP的机会，心中更是紧张了。</p>
-<p>下午进了考场，解了密码。开始答题。第一题是一个最简单不过的模拟，很快写完。第二题是回文日期，其实这道题的正解应该是先判断回文再判断日期是否合法。但当时我的话可能是因为过于紧张，想都没想就开始做模拟。是的，从头到尾枚举每个日期，再判断是否为回文。我加了很多for循环和if判断，大概是80多行的模拟吧。很多细节，特别繁琐，但还是写出来了。第三题可能是桶排序写炸了，但样例太弱，很轻松过掉了。第四题，一个骗分。出了考场，心里其实还挺平静的。</p>
-<p>后来，出成绩，200+。T1、T2都是AC，T3部分分，T4骗分失败。出乎意料的是，T2我的写法竟然没有爆掉。于是，NOIP2016普及组一等奖。</p>
-<p>其实想想，这一切仿佛都是一个梦一样，好像都是从一个巧合开始的。如果当时NOIP2015初赛没过，或许这之后的一切都不会发生了。正是因为NOIP2015初赛过了，我才开始喜欢上OI，迷上OI，后来的这一切，便都开始了。的确，就像是一个梦一样。</p>
+        <h5 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h5><p>给定一个 1 ～ n 的排列，排列中的每个数字记为 Ai，求解是否存在 p1; p2; …; pm（m ≥ 3 且 pi 单调增） Ap1; Ap2; …; Apm 为等差数列。若存在，请输出 Y，否则请输出 N。</p>
+<h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>这是我当时做的一个60分的办法，用的是二维DP。</p>
+<p>这道题和导弹拦截有点相似，所以我就先写了一个递增子序列和一个递减子序列。又把DP数组开到二维，用第二维来代表两个数之间的差。复杂度很高，但是数据比较简单，能过60%。</p>
+<p>再就是我加了一个小小的优化，只要判断到有长度到达3的子序列，就直接返回true，不用继续判断了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;math.h&gt;</div><div class="line">#include&lt;string.h&gt;</div><div class="line">#include&lt;algorithm&gt;</div><div class="line">using namespace std;</div><div class="line">int a[10010],f1[10010][1010],f2[10010][1010],l[1010];</div><div class="line">int n;</div><div class="line">bool search()</div><div class="line">&#123;</div><div class="line">	int i,j,k,kkk;</div><div class="line">	for (i=1;i&lt;=n;i++)</div><div class="line">	for (j=1;j&lt;=1010;j++)</div><div class="line">	&#123;</div><div class="line">		f1[i][j]=1;</div><div class="line">		f2[i][j]=1;</div><div class="line">	&#125;</div><div class="line">	for (i=n-1;i&gt;=1;i--)</div><div class="line">	&#123;</div><div class="line">		memset(l,0,sizeof(l));</div><div class="line">		kkk=0;</div><div class="line">		for (j=i+1;j&lt;=n;j++) if ((a[j]&gt;a[i])&amp;&amp;(f1[j][a[j]-a[i]]&gt;l[a[j]-a[i]]))</div><div class="line">		&#123;</div><div class="line">			l[a[j]-a[i]]=f1[j][a[j]-a[i]];</div><div class="line">			kkk=max(kkk,a[j]-a[i]);</div><div class="line">		&#125;</div><div class="line">		for (j=1;j&lt;=kkk;j++)</div><div class="line">		&#123;</div><div class="line">			if (l[j]&gt;0) f1[i][j]=l[j]+1;</div><div class="line">			if (f1[i][j]&gt;=3) return true;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	for (i=2;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		memset(l,0,sizeof(l));</div><div class="line">		kkk=0;</div><div class="line">		for (j=1;j&lt;=i-1;j++) if ((a[j]&gt;a[i])&amp;&amp;(f2[j][a[j]-a[i]]&gt;l[a[j]-a[i]]))</div><div class="line">		&#123;</div><div class="line">			l[a[j]-a[i]]=f2[j][a[j]-a[i]];</div><div class="line">			kkk=max(kkk,a[j]-a[i]);</div><div class="line">		&#125;</div><div class="line">		for (j=1;j&lt;=kkk;j++)</div><div class="line">		&#123;</div><div class="line">			if (l[j]&gt;0) f2[i][j]=l[j]+1;</div><div class="line">			if (f2[i][j]&gt;=3) return true;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return false; </div><div class="line">&#125;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">	freopen(&quot;seq.in&quot;,&quot;r&quot;,stdin);</div><div class="line">	freopen(&quot;seq.out&quot;,&quot;w&quot;,stdout);</div><div class="line">	int t,i,j;</div><div class="line">	scanf(&quot;%d&quot;,&amp;t);</div><div class="line">	for (i=1;i&lt;=t;i++)</div><div class="line">	&#123;</div><div class="line">		scanf(&quot;%d&quot;,&amp;n);</div><div class="line">		for (j=1;j&lt;=n;j++) scanf(&quot;%d&quot;,&amp;a[j]);</div><div class="line">		if (search()) printf(&quot;Y\n&quot;);</div><div class="line">		else printf(&quot;N\n&quot;); </div><div class="line">	&#125;</div><div class="line">	fclose(stdin);</div><div class="line">	fclose(stdout);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>下面的是正解：</p>
+<p>考虑若p,q,r（数字，不是下标）可以构成等差数列，那么p,r在数轴上的位置一定关于q是对称的。</p>
+<p>比如，对于一个n=8的排列，若q=5，则只有几种情况：p=4,r=6;p=3,r=7;p=2,r=8。且必须满足p在q之前出现，r在q之后出现。</p>
+<p>那么我们不妨维护一个数组exist[]，来记录当前数字的出现情况，出现为1，没出现为0。</p>
+<p>我们按A[]的顺序枚举每个数字作为q，并不断更新exist数组，判断exist数组中，exist[q]左右是否对称，若不对称，则说明存在一对p,r，一个已经出现，一个尚未出现，而目前尚未出现一定会在之后出现，这样的p,q,r一定会构成等差数列。</p>
+<p>快速判断是否对称，可以求01串的哈希值，然后用线段树来维护区间哈希值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line">#include&lt;algorithm&gt;</div><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;cstdlib&gt;</div><div class="line">#include&lt;cstring&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;vector&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">#include&lt;cmath&gt;</div><div class="line">#include&lt;set&gt;</div><div class="line">#include&lt;map&gt;</div><div class="line">#define N 50550</div><div class="line">#define ll unsigned long long</div><div class="line">using namespace std;</div><div class="line">int sc()</div><div class="line">&#123;</div><div class="line">    int i=0,f=1;char c=getchar();</div><div class="line">    while(c&gt;&apos;9&apos;||c&lt;&apos;0&apos;)&#123;if(c==&apos;-&apos;)f=-1;c=getchar();&#125;</div><div class="line">    while(c&gt;=&apos;0&apos;&amp;&amp;c&lt;=&apos;9&apos;)i=i*10+c-&apos;0&apos;,c=getchar();</div><div class="line">    return i*f;</div><div class="line">&#125;</div><div class="line">ll t[N][2],bin[N];</div><div class="line">int n,a[N],flag;</div><div class="line">void change(int x,int l,int r,int p)</div><div class="line">&#123;</div><div class="line">    if(l==r)</div><div class="line">    &#123;</div><div class="line">        t[x][0]=t[x][1]=233;</div><div class="line">        return;</div><div class="line">    &#125;</div><div class="line">    int mid=l+r&gt;&gt;1;</div><div class="line">    if(p&lt;=mid)change(x&lt;&lt;1,l,mid,p);</div><div class="line">    else change(x&lt;&lt;1|1,mid+1,r,p);</div><div class="line">    t[x][0]=t[x&lt;&lt;1][0]*bin[r-mid]+t[x&lt;&lt;1|1][0];</div><div class="line">    t[x][1]=t[x&lt;&lt;1|1][1]*bin[mid-l+1]+t[x&lt;&lt;1][1];</div><div class="line">&#125;</div><div class="line">ll ask(int x,int L,int R,int l,int r,int d)</div><div class="line">&#123;</div><div class="line">    if(L==l&amp;&amp;R==r)return t[x][d];</div><div class="line">    int mid=L+R&gt;&gt;1;</div><div class="line">    if(r&lt;=mid)return ask(x&lt;&lt;1,L,mid,l,r,d);</div><div class="line">    else if(l&gt;mid)return ask(x&lt;&lt;1|1,mid+1,R,l,r,d);</div><div class="line">    else if(d==0) return ask(x&lt;&lt;1,L,mid,l,mid,d)*bin[r-mid]+ask(x&lt;&lt;1|1,mid+1,R,mid+1,r,d);</div><div class="line">    else if(d==1) return ask(x&lt;&lt;1|1,mid+1,R,mid+1,r,d)*bin[mid-l+1]+ask(x&lt;&lt;1,L,mid,l,mid,d);</div><div class="line">&#125;</div><div class="line">void solve(int x)</div><div class="line">&#123;</div><div class="line">    int L=min(x-1,n-x);</div><div class="line">    change(1,1,n,x);</div><div class="line">    if(x==1||x==n)return;</div><div class="line">    ll ls=ask(1,1,n,x-L,x-1,0);</div><div class="line">    ll rs=ask(1,1,n,x+1,x+L,1);</div><div class="line">    if(ls!=rs)flag=1;</div><div class="line">&#125;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    freopen(&quot;seq.in&quot;,&quot;r&quot;,stdin);</div><div class="line">    freopen(&quot;seq.out&quot;,&quot;w&quot;,stdout);</div><div class="line"></div><div class="line">    bin[0]=1;for(int i=1;i&lt;=10000;i++)bin[i]=bin[i-1]*233;</div><div class="line">    int T=sc();</div><div class="line">    while(T--)</div><div class="line">    &#123;</div><div class="line">        memset(t,0,sizeof(t));</div><div class="line">        flag=0;n=sc();</div><div class="line">        for(int i=1;i&lt;=n;i++)</div><div class="line">        &#123;</div><div class="line">            int x=sc();</div><div class="line">            if(!flag)solve(x);</div><div class="line">        &#125;</div><div class="line">        if(flag)puts(&quot;Y&quot;);else puts(&quot;N&quot;);</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我觉得这道题的正解思路还是挺难想的，代码实现起来也有一定的难度吧。期待着什么时候，我也能独立地做出这种题的正解来。</p>
 
       
 
@@ -287,7 +282,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/oi/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/seq/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -301,18 +296,9 @@
   
 <nav id="article-nav">
   
-    <a href="/oitrain2017/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          2017NOIP复赛训练日志
-        
-      </div>
-    </a>
   
-  
-    <a href="/assassinscreed/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">刺客信条——无悔的信仰</div>
+    <a href="/p1220/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">P1220关路灯</div>
       <i class="icon-circle-right"></i>
     </a>
   
