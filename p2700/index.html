@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>刺客信条——无悔的信仰 | 王小宇的博客</title>
+  <title>P2700逐个击破 | 王小宇的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="万事皆虚，诸行皆允，我们躬耕于黑暗，却侍奉于光明。   我只玩过ACⅡ，曾经想尝试ACⅢ，但因为各种原因终究没能玩过。尽管如此，我还是想写一点AC给我的感受。   我第一次玩AC的时候是在八年级的寒假。还记得ACⅡ的开始是很长的一段新手训练，要搭建各种立方体来达到目的地，中间还会有各种激光，当时单单通过这个新手训练就用了n个小时的时间。">
-<meta name="keywords" content="爱好">
+  <meta name="description" content="这个题是我做的第一道有关于删边的并查集，我的第一反应是先把边建立起来，再按照要求去删掉。但一想，这样操作会很麻烦，而且说不好还会TLE OR MLE。 然后旁边的学长说，这种题应该反过来做。嗯，那就反过来做吧。">
+<meta name="keywords" content="编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="刺客信条——无悔的信仰">
-<meta property="og:url" content="http://yoursite.com/assassinscreed/index.html">
+<meta property="og:title" content="P2700逐个击破">
+<meta property="og:url" content="http://yoursite.com/p2700/index.html">
 <meta property="og:site_name" content="王小宇的博客">
-<meta property="og:description" content="万事皆虚，诸行皆允，我们躬耕于黑暗，却侍奉于光明。   我只玩过ACⅡ，曾经想尝试ACⅢ，但因为各种原因终究没能玩过。尽管如此，我还是想写一点AC给我的感受。   我第一次玩AC的时候是在八年级的寒假。还记得ACⅡ的开始是很长的一段新手训练，要搭建各种立方体来达到目的地，中间还会有各种激光，当时单单通过这个新手训练就用了n个小时的时间。">
+<meta property="og:description" content="这个题是我做的第一道有关于删边的并查集，我的第一反应是先把边建立起来，再按照要求去删掉。但一想，这样操作会很麻烦，而且说不好还会TLE OR MLE。 然后旁边的学长说，这种题应该反过来做。嗯，那就反过来做吧。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://ww4.sinaimg.cn/large/0060lm7Tly1fkdfl53icaj309r0ehdhe.jpg">
-<meta property="og:updated_time" content="2017-10-10T13:07:32.000Z">
+<meta property="og:updated_time" content="2017-11-02T12:58:10.920Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刺客信条——无悔的信仰">
-<meta name="twitter:description" content="万事皆虚，诸行皆允，我们躬耕于黑暗，却侍奉于光明。   我只玩过ACⅡ，曾经想尝试ACⅢ，但因为各种原因终究没能玩过。尽管如此，我还是想写一点AC给我的感受。   我第一次玩AC的时候是在八年级的寒假。还记得ACⅡ的开始是很长的一段新手训练，要搭建各种立方体来达到目的地，中间还会有各种激光，当时单单通过这个新手训练就用了n个小时的时间。">
-<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/0060lm7Tly1fkdfl53icaj309r0ehdhe.jpg">
+<meta name="twitter:title" content="P2700逐个击破">
+<meta name="twitter:description" content="这个题是我做的第一道有关于删边的并查集，我的第一反应是先把边建立起来，再按照要求去删掉。但一想，这样操作会很麻烦，而且说不好还会TLE OR MLE。 然后旁边的学长说，这种题应该反过来做。嗯，那就反过来做吧。">
   
     <link rel="alternative" href="/atom.xml" title="王小宇的博客" type="application/atom+xml">
   
@@ -161,34 +159,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-assassinscreed" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-p2700" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      刺客信条——无悔的信仰
+      P2700逐个击破
     </h1>
   
 
         
-        <a href="/assassinscreed/" class="archive-article-date">
-  	<time datetime="2017-11-02T06:25:21.290Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-02</time>
+        <a href="/p2700/" class="archive-article-date">
+  	<time datetime="2017-11-02T12:54:09.538Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="万事皆虚，诸行皆允，我们躬耕于黑暗，却侍奉于光明。"><a href="#万事皆虚，诸行皆允，我们躬耕于黑暗，却侍奉于光明。" class="headerlink" title="万事皆虚，诸行皆允，我们躬耕于黑暗，却侍奉于光明。"></a>万事皆虚，诸行皆允，我们躬耕于黑暗，却侍奉于光明。</h4><p><img src="http://ww4.sinaimg.cn/large/0060lm7Tly1fkdfl53icaj309r0ehdhe.jpg" alt="">  </p>
-<p>我只玩过ACⅡ，曾经想尝试ACⅢ，但因为各种原因终究没能玩过。尽管如此，我还是想写一点AC给我的感受。  </p>
-<p>我第一次玩AC的时候是在八年级的寒假。还记得ACⅡ的开始是很长的一段新手训练，要搭建各种立方体来达到目的地，中间还会有各种激光，当时单单通过这个新手训练就用了n个小时的时间。<a id="more"></a>  </p>
-<p>终于完成了新手训练，开始了主线。一开始什么操作也不会，打一个卫兵都要花好久的时间。后来接触AC的时间越来越长，操作也越来越熟练，也不再是直接正面强攻，而是想办法暗杀——干草、房顶、屋檐。或许这才是真正的刺客所做的吧。他们不是追求刺激，而是用头脑来悄无声息地解决问题。  </p>
-<p>我特别喜欢的是ACⅡ中的古墓，虽然古墓的数量不多，但每一个都是精品。每个古墓的类型都有很大的差异，各种机关层出不穷，充满了挑战性。  </p>
-<p>我还记得ACⅡ最后通关时的激动。一个漆黑一片的空间，一个女神在虚空中的声音，当我看到最后出现的制作组名单时，心中也是叹了一口气——终于把ACⅡ通关了；但也在想，好多剧情还没好好体验，就这么过去了。  </p>
-<p>AC系列给我印象最深的或许是刺客的那种精神吧。他们崇尚自己的信仰，不在乎别人的眼光。他们愿意用生命来维护信仰，这应该是他们最令人敬佩之处吧。</p>
-
+        <p>这个题是我做的第一道有关于删边的并查集，我的第一反应是先把边建立起来，再按照要求去删掉。但一想，这样操作会很麻烦，而且说不好还会TLE OR MLE。</p>
+<p>然后旁边的学长说，这种题应该反过来做。嗯，那就反过来做吧。<a id="more"></a></p>
+<p>既然求的是最少需要耗费多少花费多少代价来删边，而又知道了所有边的代价，那么我们可以求建边的最大代价，再用所有的代价减去它，得出来的不就相当于删边的最小代价了吗。</p>
+<p>而我们建边的时候要注意的是，题目要求所有敌人的据点不能连通，所以合并的时候不能让两个点在分别都属于敌人据点的情况下再合并。</p>
+<p>需要注意的是，当一个敌人据点加入到一个并查集里面时，这个并查集里面所有的据点都会变成敌人据点。</p>
+<p>那么，先按照道路的代价从小到大排个序，再建边就好了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line">#include&lt;iostream&gt;</div><div class="line">#include&lt;algorithm&gt;</div><div class="line">#include&lt;string.h&gt;</div><div class="line">#include&lt;math.h&gt;</div><div class="line">#include&lt;cstdio&gt;</div><div class="line">#include&lt;queue&gt;</div><div class="line">using namespace std;</div><div class="line">struct kkk&#123;</div><div class="line">    int father;</div><div class="line">    bool size;//true代表被占领 false代表未被占领 </div><div class="line">&#125;node[100010];</div><div class="line">int n,k,now;</div><div class="line">long long ans,all,used;</div><div class="line">struct www&#123;</div><div class="line">    int to,length,from;</div><div class="line">&#125;edge[200010];</div><div class="line">void add(int a,int b,int c)</div><div class="line">&#123;</div><div class="line">    now++;</div><div class="line">    edge[now].length=c;</div><div class="line">    edge[now].from=a;</div><div class="line">    edge[now].to=b;</div><div class="line">&#125;//存边操作</div><div class="line">bool cmp(www a,www b)</div><div class="line">&#123;</div><div class="line">    return a.length&gt;b.length;</div><div class="line">&#125;</div><div class="line">bool judge(int a,int b)</div><div class="line">&#123;</div><div class="line">    if ((node[a].size==true)&amp;&amp;(node[b].size==true)) return true;//如果两个城市都是敌人的返回true</div><div class="line">    else return false; //否则返回false</div><div class="line">&#125;</div><div class="line">int getfather(int x)//找根节点，以及压缩路径</div><div class="line">&#123;</div><div class="line">    if (node[x].father==x) return x;</div><div class="line">    node[x].father=getfather(node[x].father);</div><div class="line">    return node[x].father;</div><div class="line">&#125;</div><div class="line">void merge(int u,int v)</div><div class="line">&#123;</div><div class="line">    node[v].father=u;//把祖先挂上去</div><div class="line">    if (node[v].size==true) node[u].size=true;</div><div class="line">    else if (node[u].size==true) node[v].size=true;//如果这两个点有一个是敌人的城市，那么与之合并的另一个也要成为敌人的城市</div><div class="line">&#125;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int i,a,b,c,u,v;</div><div class="line">    scanf(&quot;%d%d&quot;,&amp;n,&amp;k);</div><div class="line">    for (i=0;i&lt;=n;i++)</div><div class="line">    &#123;</div><div class="line">        node[i].father=i;</div><div class="line">        node[i].size=false;</div><div class="line">    &#125;//初始化，注意，城市是从0开始的</div><div class="line">    for (i=1;i&lt;=k;i++)</div><div class="line">    &#123;</div><div class="line">        scanf(&quot;%d&quot;,&amp;a);</div><div class="line">        node[a].size=true;</div><div class="line">    &#125;//把敌人城市标记</div><div class="line">    for (i=1;i&lt;=n-1;i++)</div><div class="line">    &#123;</div><div class="line">        scanf(&quot;%d%d%d&quot;,&amp;a,&amp;b,&amp;c);</div><div class="line">        add(a,b,c);</div><div class="line">        all=all+c;</div><div class="line">    &#125;//读入边，还有计算所有边的总代价</div><div class="line">    sort(edge+1,edge+n,cmp);//按边的代价从大到小排序</div><div class="line">    for (i=1;i&lt;=n-1;i++) </div><div class="line">    &#123;</div><div class="line">        u=getfather(edge[i].from);</div><div class="line">        v=getfather(edge[i].to);//得出边的两边的城市的并查集的根节点</div><div class="line">        if (judge(u,v)==false)//判断，如果两个点不是全都是敌人的城市，那么合并</div><div class="line">        &#123;</div><div class="line">            merge(u,v);//合并</div><div class="line">            used=used+edge[i].length;//建边的代价增加</div><div class="line">        &#125;    </div><div class="line">    &#125;</div><div class="line">    ans=all-used;//那么，最后的答案便是总代价减去建边的最大代价了</div><div class="line">    printf(&quot;%lld\n&quot;,ans);</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
 
       
@@ -222,7 +219,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爱好</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">编程</a>
         		</li>
       		
 		</ul>
@@ -278,7 +275,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/assassinscreed/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/p2700/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,18 +289,9 @@
   
 <nav id="article-nav">
   
-    <a href="/p1220/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          P1220关路灯
-        
-      </div>
-    </a>
   
-  
-    <a href="/median/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">中值滤波</div>
+    <a href="/seq/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">排列</div>
       <i class="icon-circle-right"></i>
     </a>
   
